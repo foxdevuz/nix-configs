@@ -7,14 +7,11 @@
   programs.home-manager.enable = true;
   nixpkgs.config.allowUnfree = true;
   imports = [
-    ./modules/dev/php
     ./modules/git
+    ./modules/shell/zsh.nix
   ];
 
   home.packages = with pkgs; [
-    # browsers
-    firefox
-
     git
     gh
     curl
@@ -45,11 +42,5 @@
     bat
     eza
     fd
-
-    discord
-    telegram-desktop
-    obs-studio
-    vlc
-    jetbrains-toolbox
   ];
 }
